@@ -1,0 +1,41 @@
+import gql from 'graphql-tag';
+
+export default gql`
+	query{
+        getProfile{
+            displayName
+            email
+            allAddress{
+                name
+                lastname
+                address
+                city
+                state
+                select
+            }
+            shoppingHistory{
+                order
+                exchangeRate
+                products{
+                    id
+                    type
+                    name
+                    color
+                    price
+                    quantity
+                }
+                date
+                status
+                shippingStatus
+            }
+            favorites{
+                id
+                type
+                name
+                price
+                color
+            }
+            SessionStatus
+    }
+}
+`;
