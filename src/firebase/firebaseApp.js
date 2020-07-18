@@ -2,14 +2,14 @@ import firebase from 'firebase/app'
 import 'firebase/firestore';
 import 'firebase/auth';
 const firebaseConfig = {
-  apiKey: "AIzaSyB3I6Y0NJknaUJzpBhmcEBqKvltL_FaUe8",
-  authDomain: "afrodiseas-77e4b.firebaseapp.com",
-  databaseURL: "https://afrodiseas-77e4b.firebaseio.com",
-  projectId: "afrodiseas-77e4b",
-  storageBucket: "afrodiseas-77e4b.appspot.com",
-  messagingSenderId: "78912330611",
-  appId: "1:78912330611:web:f56c4fc961a974627dc306",
-  measurementId: "G-NB8TLRSWB1"
+  apiKey: process.env.apiKey,
+  authDomain: process.env.authDomain,
+  databaseURL: process.env.databaseURL,
+  projectId: process.env.projectId,
+  storageBucket: process.env.storageBucket,
+  messagingSenderId: process.env.messagingSenderId,
+  appId: process.env.appId,
+  measurementId: process.env.measurementId
 };
 
 const app = firebase.initializeApp(firebaseConfig)
